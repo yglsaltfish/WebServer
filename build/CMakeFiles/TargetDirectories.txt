@@ -1,0 +1,5 @@
+/home/water/Desktop/C++/ZLearn/build/CMakeFiles/rebuild_cache.dir
+/home/water/Desktop/C++/ZLearn/build/CMakeFiles/edit_cache.dir
+/home/water/Desktop/C++/ZLearn/build/simple/CMakeFiles/rebuild_cache.dir
+/home/water/Desktop/C++/ZLearn/build/simple/CMakeFiles/edit_cache.dir
+/home/water/Desktop/C++/ZLearn/build/simple/CMakeFiles/echo.dir

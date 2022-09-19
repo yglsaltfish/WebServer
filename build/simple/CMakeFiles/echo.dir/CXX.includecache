@@ -1,0 +1,22 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/water/Desktop/C++/ZLearn/simple/echo.h
+muduo/net/TcpServer.h
+/home/water/Desktop/C++/ZLearn/simple/muduo/net/TcpServer.h
+
+/home/water/Desktop/C++/ZLearn/simple/main.cc
+echo.h
+/home/water/Desktop/C++/ZLearn/simple/echo.h
+muduo/base/Logging.h
+/home/water/Desktop/C++/ZLearn/simple/muduo/base/Logging.h
+muduo/net/EventLoop.h
+/home/water/Desktop/C++/ZLearn/simple/muduo/net/EventLoop.h
+unistd.h
+-
+
