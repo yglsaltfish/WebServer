@@ -23,5 +23,5 @@ set(CXX_FLAGS
  -rdynamic
  )
 
-ADD_SUBDIRECTORY(simple)
+ADD_SUBDIRECTORY(Zlearn/example)
 

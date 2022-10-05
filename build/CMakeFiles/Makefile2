@@ -44,73 +44,139 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/water/Desktop/C++/ZLearn
+CMAKE_SOURCE_DIR = /home/water/Desktop/C++/Zlearn
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/water/Desktop/C++/ZLearn/build
+CMAKE_BINARY_DIR = /home/water/Desktop/C++/Zlearn/build
 
 #=============================================================================
 # Directory level rules for the build root directory
 
 # The main recursive "all" target.
-all: simple/all
+all: Zlearn/example/all
 
 .PHONY : all
 
 # The main recursive "preinstall" target.
-preinstall: simple/preinstall
+preinstall: Zlearn/example/preinstall
 
 .PHONY : preinstall
 
 # The main recursive "clean" target.
-clean: simple/clean
+clean: Zlearn/example/clean
 
 .PHONY : clean
 
 #=============================================================================
-# Directory level rules for directory simple
+# Directory level rules for directory Zlearn/example
 
 # Recursive "all" directory target.
-simple/all: simple/CMakeFiles/echo.dir/all
+Zlearn/example/all: Zlearn/example/echo/all
+Zlearn/example/all: Zlearn/example/finger/all
 
-.PHONY : simple/all
+.PHONY : Zlearn/example/all
 
 # Recursive "preinstall" directory target.
-simple/preinstall:
+Zlearn/example/preinstall: Zlearn/example/echo/preinstall
+Zlearn/example/preinstall: Zlearn/example/finger/preinstall
 
-.PHONY : simple/preinstall
+.PHONY : Zlearn/example/preinstall
 
 # Recursive "clean" directory target.
-simple/clean: simple/CMakeFiles/echo.dir/clean
+Zlearn/example/clean: Zlearn/example/echo/clean
+Zlearn/example/clean: Zlearn/example/finger/clean
 
-.PHONY : simple/clean
+.PHONY : Zlearn/example/clean
 
 #=============================================================================
-# Target rules for target simple/CMakeFiles/echo.dir
+# Directory level rules for directory Zlearn/example/echo
+
+# Recursive "all" directory target.
+Zlearn/example/echo/all: Zlearn/example/echo/CMakeFiles/echo.dir/all
+
+.PHONY : Zlearn/example/echo/all
+
+# Recursive "preinstall" directory target.
+Zlearn/example/echo/preinstall:
+
+.PHONY : Zlearn/example/echo/preinstall
+
+# Recursive "clean" directory target.
+Zlearn/example/echo/clean: Zlearn/example/echo/CMakeFiles/echo.dir/clean
+
+.PHONY : Zlearn/example/echo/clean
+
+#=============================================================================
+# Directory level rules for directory Zlearn/example/finger
+
+# Recursive "all" directory target.
+Zlearn/example/finger/all: Zlearn/example/finger/CMakeFiles/finger.dir/all
+
+.PHONY : Zlearn/example/finger/all
+
+# Recursive "preinstall" directory target.
+Zlearn/example/finger/preinstall:
+
+.PHONY : Zlearn/example/finger/preinstall
+
+# Recursive "clean" directory target.
+Zlearn/example/finger/clean: Zlearn/example/finger/CMakeFiles/finger.dir/clean
+
+.PHONY : Zlearn/example/finger/clean
+
+#=============================================================================
+# Target rules for target Zlearn/example/echo/CMakeFiles/echo.dir
 
 # All Build rule for target.
-simple/CMakeFiles/echo.dir/all:
-	$(MAKE) -f simple/CMakeFiles/echo.dir/build.make simple/CMakeFiles/echo.dir/depend
-	$(MAKE) -f simple/CMakeFiles/echo.dir/build.make simple/CMakeFiles/echo.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/water/Desktop/C++/ZLearn/build/CMakeFiles --progress-num=1,2 "Built target echo"
-.PHONY : simple/CMakeFiles/echo.dir/all
+Zlearn/example/echo/CMakeFiles/echo.dir/all:
+	$(MAKE) -f Zlearn/example/echo/CMakeFiles/echo.dir/build.make Zlearn/example/echo/CMakeFiles/echo.dir/depend
+	$(MAKE) -f Zlearn/example/echo/CMakeFiles/echo.dir/build.make Zlearn/example/echo/CMakeFiles/echo.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/water/Desktop/C++/Zlearn/build/CMakeFiles --progress-num=1,2,3 "Built target echo"
+.PHONY : Zlearn/example/echo/CMakeFiles/echo.dir/all
 
 # Build rule for subdir invocation for target.
-simple/CMakeFiles/echo.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/water/Desktop/C++/ZLearn/build/CMakeFiles 2
-	$(MAKE) -f CMakeFiles/Makefile2 simple/CMakeFiles/echo.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/water/Desktop/C++/ZLearn/build/CMakeFiles 0
-.PHONY : simple/CMakeFiles/echo.dir/rule
+Zlearn/example/echo/CMakeFiles/echo.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/water/Desktop/C++/Zlearn/build/CMakeFiles 3
+	$(MAKE) -f CMakeFiles/Makefile2 Zlearn/example/echo/CMakeFiles/echo.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/water/Desktop/C++/Zlearn/build/CMakeFiles 0
+.PHONY : Zlearn/example/echo/CMakeFiles/echo.dir/rule
 
 # Convenience name for target.
-echo: simple/CMakeFiles/echo.dir/rule
+echo: Zlearn/example/echo/CMakeFiles/echo.dir/rule
 
 .PHONY : echo
 
 # clean rule for target.
-simple/CMakeFiles/echo.dir/clean:
-	$(MAKE) -f simple/CMakeFiles/echo.dir/build.make simple/CMakeFiles/echo.dir/clean
-.PHONY : simple/CMakeFiles/echo.dir/clean
+Zlearn/example/echo/CMakeFiles/echo.dir/clean:
+	$(MAKE) -f Zlearn/example/echo/CMakeFiles/echo.dir/build.make Zlearn/example/echo/CMakeFiles/echo.dir/clean
+.PHONY : Zlearn/example/echo/CMakeFiles/echo.dir/clean
+
+#=============================================================================
+# Target rules for target Zlearn/example/finger/CMakeFiles/finger.dir
+
+# All Build rule for target.
+Zlearn/example/finger/CMakeFiles/finger.dir/all:
+	$(MAKE) -f Zlearn/example/finger/CMakeFiles/finger.dir/build.make Zlearn/example/finger/CMakeFiles/finger.dir/depend
+	$(MAKE) -f Zlearn/example/finger/CMakeFiles/finger.dir/build.make Zlearn/example/finger/CMakeFiles/finger.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/water/Desktop/C++/Zlearn/build/CMakeFiles --progress-num=4,5 "Built target finger"
+.PHONY : Zlearn/example/finger/CMakeFiles/finger.dir/all
+
+# Build rule for subdir invocation for target.
+Zlearn/example/finger/CMakeFiles/finger.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/water/Desktop/C++/Zlearn/build/CMakeFiles 2
+	$(MAKE) -f CMakeFiles/Makefile2 Zlearn/example/finger/CMakeFiles/finger.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/water/Desktop/C++/Zlearn/build/CMakeFiles 0
+.PHONY : Zlearn/example/finger/CMakeFiles/finger.dir/rule
+
+# Convenience name for target.
+finger: Zlearn/example/finger/CMakeFiles/finger.dir/rule
+
+.PHONY : finger
+
+# clean rule for target.
+Zlearn/example/finger/CMakeFiles/finger.dir/clean:
+	$(MAKE) -f Zlearn/example/finger/CMakeFiles/finger.dir/build.make Zlearn/example/finger/CMakeFiles/finger.dir/clean
+.PHONY : Zlearn/example/finger/CMakeFiles/finger.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.

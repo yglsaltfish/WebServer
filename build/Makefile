@@ -48,10 +48,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/water/Desktop/C++/ZLearn
+CMAKE_SOURCE_DIR = /home/water/Desktop/C++/Zlearn
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/water/Desktop/C++/ZLearn/build
+CMAKE_BINARY_DIR = /home/water/Desktop/C++/Zlearn/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -80,9 +80,9 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/water/Desktop/C++/ZLearn/build/CMakeFiles /home/water/Desktop/C++/ZLearn/build/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/water/Desktop/C++/Zlearn/build/CMakeFiles /home/water/Desktop/C++/Zlearn/build/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/water/Desktop/C++/ZLearn/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/water/Desktop/C++/Zlearn/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -120,8 +120,21 @@ echo: cmake_check_build_system
 
 # fast build rule for target.
 echo/fast:
-	$(MAKE) -f simple/CMakeFiles/echo.dir/build.make simple/CMakeFiles/echo.dir/build
+	$(MAKE) -f Zlearn/example/echo/CMakeFiles/echo.dir/build.make Zlearn/example/echo/CMakeFiles/echo.dir/build
 .PHONY : echo/fast
+
+#=============================================================================
+# Target rules for targets named finger
+
+# Build rule for target.
+finger: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 finger
+.PHONY : finger
+
+# fast build rule for target.
+finger/fast:
+	$(MAKE) -f Zlearn/example/finger/CMakeFiles/finger.dir/build.make Zlearn/example/finger/CMakeFiles/finger.dir/build
+.PHONY : finger/fast
 
 # Help Target
 help:
@@ -132,6 +145,7 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
 	@echo "... echo"
+	@echo "... finger"
 .PHONY : help
 
 

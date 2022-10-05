@@ -1,0 +1,1 @@
+/usr/bin/c++    -rdynamic CMakeFiles/finger.dir/finger01.cc.o  -o finger  -lmuduo_base -lmuduo_net -lpthread 

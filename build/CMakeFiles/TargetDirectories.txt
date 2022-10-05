@@ -1,5 +1,10 @@
-/home/water/Desktop/C++/ZLearn/build/CMakeFiles/rebuild_cache.dir
-/home/water/Desktop/C++/ZLearn/build/CMakeFiles/edit_cache.dir
-/home/water/Desktop/C++/ZLearn/build/simple/CMakeFiles/rebuild_cache.dir
-/home/water/Desktop/C++/ZLearn/build/simple/CMakeFiles/edit_cache.dir
-/home/water/Desktop/C++/ZLearn/build/simple/CMakeFiles/echo.dir
+/home/water/Desktop/C++/Zlearn/build/CMakeFiles/rebuild_cache.dir
+/home/water/Desktop/C++/Zlearn/build/CMakeFiles/edit_cache.dir
+/home/water/Desktop/C++/Zlearn/build/Zlearn/example/CMakeFiles/rebuild_cache.dir
+/home/water/Desktop/C++/Zlearn/build/Zlearn/example/CMakeFiles/edit_cache.dir
+/home/water/Desktop/C++/Zlearn/build/Zlearn/example/echo/CMakeFiles/rebuild_cache.dir
+/home/water/Desktop/C++/Zlearn/build/Zlearn/example/echo/CMakeFiles/edit_cache.dir
+/home/water/Desktop/C++/Zlearn/build/Zlearn/example/echo/CMakeFiles/echo.dir
+/home/water/Desktop/C++/Zlearn/build/Zlearn/example/finger/CMakeFiles/rebuild_cache.dir
+/home/water/Desktop/C++/Zlearn/build/Zlearn/example/finger/CMakeFiles/edit_cache.dir
+/home/water/Desktop/C++/Zlearn/build/Zlearn/example/finger/CMakeFiles/finger.dir
