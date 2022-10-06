@@ -20,7 +20,7 @@ __thread const char* t_threadName = "unknown";
 static_assert(std::is_same<int, pid_t>::value, "pid_t should be int");
 
 
-//这个函数的功能就是,把出异常的函数栈转换成string返回,在构造函数中就赋值给了stack_,参数为true的时候,可以让输出信息更直观一点
+//这个函数的功能就是,把出异常的函数栈转换成string返回,在构造函数中就赋值给了stack_,参数为true的时候,可以让输出信息直观一点
 string stackTrace(bool demangle)
 {
   string stack;
@@ -35,7 +35,7 @@ string stackTrace(bool demangle)
   {
     size_t len = 256;
     char* demangled = demangle ? static_cast<char*>(::malloc(len)) : nullptr;
-    for (int i = 1; i < nptrs; ++i)  // skipping the 0-th, which is this function
+    for (int i = 1; i < nptrs; ++i)  // 跳过了第一个索引
     {
       if (demangle)
       {
