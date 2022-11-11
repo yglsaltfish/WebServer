@@ -1,7 +1,0 @@
-/home/water/Desktop/C++/Zlearn/build/CMakeFiles/rebuild_cache.dir
-/home/water/Desktop/C++/Zlearn/build/CMakeFiles/edit_cache.dir
-/home/water/Desktop/C++/Zlearn/build/Zlearn/base/CMakeFiles/rebuild_cache.dir
-/home/water/Desktop/C++/Zlearn/build/Zlearn/base/CMakeFiles/edit_cache.dir
-/home/water/Desktop/C++/Zlearn/build/Zlearn/base/test/CMakeFiles/rebuild_cache.dir
-/home/water/Desktop/C++/Zlearn/build/Zlearn/base/test/CMakeFiles/edit_cache.dir
-/home/water/Desktop/C++/Zlearn/build/Zlearn/base/test/CMakeFiles/Timestamp_test.dir
