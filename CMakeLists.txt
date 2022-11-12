@@ -1,27 +1,21 @@
 cmake_minimum_required(VERSION 2.6)
+set(CMAKE_C_COMPILER  "/usr/bin/clang")
+set(CMAKE_CXX_COMPILER  "/usr/bin/clang++")
 
-project(echo CXX)
+project(WebServer)
 
-set(CXX_FLAGS
- -g
- # -DVALGRIND
- # -DMUDUO_STD_STRING
- -Wall
- -Wextra
- # -m32
- -Werror
- -Wconversion
- -Wno-unused-parameter
- -Wold-style-cast
- -Woverloaded-virtual
- -Wpointer-arith
- -Wshadow
- -Wwrite-strings
- -march=native
- # -MMD
- # -std=c++0x
- -rdynamic
- )
+#add_library(block_queue SHARED log/block_queue.cc)
 
-ADD_SUBDIRECTORY(Zlearn/base)
+
+add_executable(${PROJECT_NAME}
+    test/test.cc
+)
+
+#target_link_libraries(${PROJECT_NAME} block_queue)
+target_include_directories(${PROJECT_NAME}
+        PRIVATE
+        ${PROJECT_SOURCE_DIR}/lock
+        ${PROJECT_SOURCE_DIR}/log
+        )
+
 
