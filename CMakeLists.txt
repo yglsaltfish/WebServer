@@ -9,6 +9,7 @@ project(WebServer)
 
 add_executable(${PROJECT_NAME}
     test/test.cc
+    log/log.cc
 )
 
 #target_link_libraries(${PROJECT_NAME} block_queue)
@@ -17,5 +18,7 @@ target_include_directories(${PROJECT_NAME}
         ${PROJECT_SOURCE_DIR}/lock
         ${PROJECT_SOURCE_DIR}/log
         )
+
+target_link_libraries(${PROJECT_NAME} pthread)
 
 
