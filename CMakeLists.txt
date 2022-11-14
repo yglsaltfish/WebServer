@@ -10,15 +10,29 @@ project(WebServer)
 add_executable(${PROJECT_NAME}
     test/test.cc
     log/log.cc
+    CGImysql/sql_connection.cc
+    timer/lst_timer.cc
+    http/http_conn.cc
 )
 
-#target_link_libraries(${PROJECT_NAME} block_queue)
+
 target_include_directories(${PROJECT_NAME}
         PRIVATE
         ${PROJECT_SOURCE_DIR}/lock
         ${PROJECT_SOURCE_DIR}/log
-        )
+        ${PROJECT_SOURCE_DIR}/CGImysql
+        ${PROJECT_SOURCE_DIR}/threadpool
+        ${PROJECT_SOURCE_DIR}/timer
+        ${PROJECT_SOURCE_DIR}/http
+)
 
-target_link_libraries(${PROJECT_NAME} pthread)
+
+
+set(MYSQL_LIBS
+    mysqlclient pthread z m rt atomic ssl crypto dl
+)
+
+
+target_link_libraries(${PROJECT_NAME}  ${MYSQL_LIBS})
 
 

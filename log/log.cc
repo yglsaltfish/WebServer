@@ -87,11 +87,15 @@ void Log::write_log(int level, const char *format, ...)
     m_count++;
     if(m_today != my_tm.tm_mday || m_count % m_spilt_lines == 0)
     {
+
+        
         char new_log[16] = {0};
         fflush(m_fp);
         fclose(m_fp);
+        std::cout << m_count;
         char tail[16] = {0};
         snprintf(tail, 16, "%d_%02d_%02d_", my_tm.tm_year + 1900, my_tm.tm_mon, my_tm.tm_mday);
+        
         if(m_today != my_tm.tm_mday)
         {
             snprintf(new_log, 16, "%s%s%s", dir_name, tail, log_name);
@@ -104,22 +108,25 @@ void Log::write_log(int level, const char *format, ...)
         }
         m_fp = fopen(new_log , "a");
     }
+    
     va_list  valst;
     va_start(valst, format);
     std::string log_str;
-    m_mutex.lock();
-
-    int n = snprintf(m_buf, 48, "%d-%02d-%02d %02d:%02d:%02d.%06ld %s ",
+    
+    
+    int n = snprintf(m_buf, 48, "%d-%02d-%02d %02d:%02d:%02d %s ",
                      my_tm.tm_year + 1900, my_tm.tm_mon + 1, my_tm.tm_mday,
-                     my_tm.tm_hour, my_tm.tm_min, my_tm.tm_sec, now.tv_usec, s);
+                     my_tm.tm_hour, my_tm.tm_min, my_tm.tm_sec, s);
     
     int m = vsnprintf(m_buf + n, m_log_buf_size - 1, format, valst);
 
+    
     m_buf[n + m] = '\n';
     m_buf[n + m + 1] = '\0';
+    std::cout<<m_buf;
     log_str = m_buf;
     m_mutex.unlock();
-    
+
     if(m_is_async && !m_log_queue->full())
     {
         m_log_queue->push(log_str);

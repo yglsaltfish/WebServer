@@ -19,6 +19,7 @@ public:
     static void *flush_log_thread(void *args)
     {
         Log::get_instance()->async_write_log();
+        
     }
 
     bool init(const char *file_name, int close_log, int log_buf_size = 8192, int split_lines = 500000, int max_queue_size = 0);
