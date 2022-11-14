@@ -78,4 +78,3 @@ public:
     client_data *users_timer;
     Utils utils;
 };
-#endif

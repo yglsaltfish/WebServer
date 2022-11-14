@@ -15,6 +15,7 @@ add_executable(${PROJECT_NAME}
     timer/lst_timer.cc
     http/http_conn.cc
     Webserver/webserver.cc
+    config/config.cc
 )
 
 
@@ -28,6 +29,7 @@ target_include_directories(${PROJECT_NAME}
         ${PROJECT_SOURCE_DIR}/timer
         ${PROJECT_SOURCE_DIR}/http
         ${PROJECT_SOURCE_DIR}/Webserver
+        ${PROJECT_SOURCE_DIR}/config
 )
 
 
