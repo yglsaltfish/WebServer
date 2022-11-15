@@ -19,7 +19,7 @@ std::map<std::string , std::string> users;
 void http_conn::initmysql_result(connection_pool *connPool)
 {
     MYSQL *mysql = nullptr;
-    ConnectionRAII mysqlcon(&mysql, connPool);
+    connectionRAII mysqlcon(&mysql, connPool);
     if(mysql_query(mysql, "SELECT username, passwd from user"))
     {
         LOG_ERROR("SELECT error:%s\n", mysql_error(mysql));
