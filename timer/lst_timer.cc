@@ -62,6 +62,7 @@ void sort_timer_lst::adjust_timer(util_timer *timer)
         add_timer(timer, timer->next);
     }
 }
+
 void sort_timer_lst::del_timer(util_timer *timer)
 {
     if (!timer)

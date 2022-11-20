@@ -33,7 +33,6 @@ private:
     int m_back;
 };
 
-#include "block_queue.h"
 
 template <typename T>
 block_queue<T>::block_queue(int max_size)

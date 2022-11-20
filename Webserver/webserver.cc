@@ -107,6 +107,9 @@ void WebServer::eventListen()
     assert(m_listenfd >= 0);
 
     //优雅关闭连接
+    //linger {0, 0} / {0, k} :close立即返回，底层会将没有发送完的数据发送完成，之后释放资源
+    //linger {1, 0} : close立即返回，TCP模块将丢弃被关闭的socket对应的TCP缓冲区残留的数据，同时发送一个复位报文段。
+    //linger {1,k(k != 0)} ：1、对于阻塞的socket，close将等待k的时间发送完数据并得到确认后关闭，若没有完成，会返回-1并设置errno为EWOULDBLOCK；2、若是非阻塞的则close立即返回，通过判断返回值和errno来判断残留数据是否发送完毕。
     if (0 == m_OPT_LINGER)
     {
         struct linger tmp = {0, 1};
