@@ -153,7 +153,6 @@ void WebServer::eventListen()
     utils.addsig(SIGPIPE, SIG_IGN);
     utils.addsig(SIGALRM, utils.sig_handler, false);
     utils.addsig(SIGTERM, utils.sig_handler, false);
-
     alarm(TIMESLOT);
 
     //工具类,信号和描述符基础操作

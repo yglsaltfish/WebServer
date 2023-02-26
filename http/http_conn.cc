@@ -340,37 +340,36 @@ http_conn::HTTP_CODE http_conn::process_read()
         text = get_line();
         m_start_line = m_checked_idx;
         LOG_INFO("%s", text);
-        switch (m_check_state)
-        {
-        case CHECK_STATE_REQUESTLINE:
-        {
-            ret = parse_request_line(text);
-            if (ret == BAD_REQUEST)
-                return BAD_REQUEST;
-            break;
-        }
-        case CHECK_STATE_HEADER:
-        {
-            ret = parse_headers(text);
-            if (ret == BAD_REQUEST)
-                return BAD_REQUEST;
-            else if (ret == GET_REQUEST)
+        switch (m_check_state){
+            case CHECK_STATE_REQUESTLINE:
             {
-                return do_request();
+                ret = parse_request_line(text);
+                if (ret == BAD_REQUEST)
+                    return BAD_REQUEST;
+                break;
             }
-            break;
-        }
-        case CHECK_STATE_CONTENT:
-        {
-            ret = parse_content(text);
-            if (ret == GET_REQUEST)
-                return do_request();
-            line_status = LINE_OPEN;
-            break;
-        }
-        default:
-            return INTERNAL_ERROR;
-        }
+            case CHECK_STATE_HEADER:
+            {
+                ret = parse_headers(text);
+                if (ret == BAD_REQUEST)
+                    return BAD_REQUEST;
+                else if (ret == GET_REQUEST)
+                {
+                    return do_request();
+                }
+                break;
+            }
+            case CHECK_STATE_CONTENT:
+            {
+                ret = parse_content(text);
+                if (ret == GET_REQUEST)
+                    return do_request();
+                line_status = LINE_OPEN;
+                break;
+            }
+            default:
+                return INTERNAL_ERROR;
+            }
     }
     return NO_REQUEST;
 }
